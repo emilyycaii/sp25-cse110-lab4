@@ -1,0 +1,3 @@
+1. The bug is that "let result = num1 + num2" concatenates num1 and num2 as strings instead of arithmetically adding it. This happened because .value always returns as a string, so num1 and num2 are retrieved as strings from input fields. When adding a string with another string, it performs concatenation,so result ends up as a string type.
+
+2. To fix the bug, you could convert num1 and num2 to a number type. Instead of "let result = num1 + num2", you would replace it with "let result = Number(num1) + Number(num2);" This would lead to an arithmetic addition operation, and result will be a number instead of a string.
